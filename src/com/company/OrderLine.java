@@ -1,5 +1,4 @@
 package com.company;
-
 import org.joda.money.Money;
 
 public class OrderLine {
@@ -16,17 +15,12 @@ public class OrderLine {
 
     @Override
     public String toString() {
-        return productName + ", " + quantity +
-                " items" +
-                ", price per item " + price +
-                '}';
+        return productName + ", " + quantity + " items" + ", price per item " + price;
     }
 
-    public money getOrderLineTotalValue() {
-        money.multipliedBy();
+    public Money getOrderLineTotalValue() {
+        return price.multipliedBy(quantity);
 
-        return money;
     }
-
 
 }
